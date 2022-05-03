@@ -1,0 +1,45 @@
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px 8px 0px rgba(5, 7, 7, 0.52);
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 4px 4px 8px 8px rgba(5, 7, 7, 0.52);
+  }
+}
+.containerDescr {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.showCard {
+  animation: fade-in 400ms;
+}
+.hideCard {
+  animation: fade-out 400ms;
+}
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+    transform: translateY(50px) scale(0.7);
+  }
+  100%{
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0%{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(50px) scale(0.7);
+  }
+}
+

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+a.active {
+  color: var(--text-color-white-hover);
+}
+
+.btn {
+  border: none;
+  font-size: 12px;
+  padding: 8px 22px;
+  border-radius: 10px;
+  color: var(--text-color-dark);
+  background-color: var(--search-item-bg);
+  transition: color 0.3s, background-color 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    color: var(--text-color-dark-hover);
+    background-color: var(--search-item-bg-hover);
+  }
+}
+
+:root {
+  --main-bg-color: rgb(68, 86, 116);
+  --header-bg-color: rgb(40, 62, 98);
+  --bg-color: rgb(53, 73, 105);
+
+  --text-color-white: rgb(213, 218, 226);
+  --text-color-white-hover: rgb(191, 157, 229);
+  --text-color-dark: rgb(42, 43, 46);
+  --text-color-dark-hover: rgb(14, 15, 17);
+
+  --search-item-bg: rgb(196, 202, 218);
+  --search-item-bg-hover: rgb(161, 173, 202);
+
+  --link-color: rgb(216, 137, 170);
+  --link-color-hover: rgb(236, 152, 232);
+
+  --warning-color: rgb(255, 141, 141);
+  --small-spinner-color: #f3c5f7;
+  --text-succsess-color: #4afa73;
+}

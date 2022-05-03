@@ -1,0 +1,18 @@
+.content {
+  width: 60vw;
+  margin: 0 auto;
+}
+.btnBack {
+  padding: 3px 25px;
+  border-radius: 5px;
+  background-color: var(--text-color-dark);
+  color: var(--text-color-white);
+  margin-bottom: 15px;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  } 
+}

@@ -1,0 +1,40 @@
+.homePage {
+  position: relative;
+}
+.error {
+  position: absolute;
+  top: 300px;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 28px;
+  text-align: center;
+  margin-top: 50px;
+}
+.showError {
+  animation: fade-in 450ms;
+}
+.hideError {
+  animation: fade-out 450ms;
+}
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+    transform: translateY(50px) translateX(50%) scale(0.5);
+  }
+  100%{
+    transform: translateY(0) translateX(50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0%{
+    opacity: 1;
+    transform: translateY(0) translateX(50%) scale(1);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(50px) translateX(50%) scale(0.5);
+  }
+}

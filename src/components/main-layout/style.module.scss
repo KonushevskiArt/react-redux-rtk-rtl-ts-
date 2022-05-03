@@ -1,0 +1,14 @@
+.mainLayout {
+  width: 100vw;
+  max-width: 840px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  color: var(--text-color-white);
+}
+
+@media screen and (max-width: 830px) {
+  .mainLayout {
+    max-width: 600px;
+  }
+}

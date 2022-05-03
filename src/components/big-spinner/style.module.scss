@@ -1,0 +1,68 @@
+
+//variables
+$basic-dark-color: #f3c5f7; //color of the spinner
+$border-width: 4px; //width of spinners border
+$basic-spinner-dimensions: 125px; //width and height of spinner
+$main-spinner-dimensions: $basic-spinner-dimensions - $border-width * 2; //width and height of bigger circle
+$small-spinner-dimensions: $main-spinner-dimensions * 0.7; //width and height of smaller circle
+
+
+.loading {
+  position: absolute;
+  top: 300px;
+  right: 50%;
+  transform: translateX(50%);
+  margin-top: 30px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.spinner {
+  position: relative;
+  width: $basic-spinner-dimensions;
+  height: $basic-spinner-dimensions;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+}
+
+.spinner-2 {
+
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+      border-style: solid;
+    }
+    
+    100% {
+      transform: scale(0);
+      border-style: dashed;
+    }
+  }
+  
+  &:before {
+    width: $main-spinner-dimensions;
+    height: $main-spinner-dimensions;
+    border-color: $basic-dark-color;
+    top: 0px;
+    left: 0px;
+    animation: scale 1s linear 0s infinite alternate;
+  }
+  
+  &:after {
+    width: $main-spinner-dimensions;
+    height: $main-spinner-dimensions;
+    border-color: $basic-dark-color;
+    top: 0;
+    left: 0;
+    animation: scale 1s linear 0s infinite alternate-reverse;
+  }
+}
